@@ -41,6 +41,10 @@
 		E77F88CA2A6122CE000A33A6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E77F88C92A6122CE000A33A6 /* FirebaseFirestore */; };
 		E77F88CC2A6122D3000A33A6 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E77F88CB2A6122D3000A33A6 /* FirebaseFirestoreSwift */; };
 		E77F88CE2A67EE59000A33A6 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77F88CD2A67EE59000A33A6 /* AppError.swift */; };
+		E7A98AF92AB0592F0073F9ED /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A98AF82AB0592F0073F9ED /* Configuration.swift */; };
+		E7A98AFB2AB059DD0073F9ED /* animation1.json in Resources */ = {isa = PBXBuildFile; fileRef = E7A98AFA2AB059DD0073F9ED /* animation1.json */; };
+		E7A98AFD2AB05A8B0073F9ED /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A98AFC2AB05A8B0073F9ED /* LottieView.swift */; };
+		E7A98B002AB05B390073F9ED /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E7A98AFF2AB05B390073F9ED /* Lottie */; };
 		E7ABDB7D2A77B9910024A52C /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = E7ABDB7C2A77B9910024A52C /* FacebookCore */; };
 		E7ABDB7F2A77B9910024A52C /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = E7ABDB7E2A77B9910024A52C /* FacebookLogin */; };
 		E7ABDB812A77BA180024A52C /* AppDelegateFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ABDB802A77BA180024A52C /* AppDelegateFB.swift */; };
@@ -95,6 +99,9 @@
 		E77F88BD2A5C836F000A33A6 /* AuthDataResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataResultModel.swift; sourceTree = "<group>"; };
 		E77F88BF2A5E8A88000A33A6 /* PasswordRecoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRecoveryView.swift; sourceTree = "<group>"; };
 		E77F88CD2A67EE59000A33A6 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		E7A98AF82AB0592F0073F9ED /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		E7A98AFA2AB059DD0073F9ED /* animation1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation1.json; sourceTree = "<group>"; };
+		E7A98AFC2AB05A8B0073F9ED /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		E7ABDB802A77BA180024A52C /* AppDelegateFB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateFB.swift; sourceTree = "<group>"; };
 		E7ABDB822A77BDBC0024A52C /* SmartHomeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartHomeApp.entitlements; sourceTree = "<group>"; };
 		E7ABDB832A77CF840024A52C /* FacebookSignInResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookSignInResultModel.swift; sourceTree = "<group>"; };
@@ -132,6 +139,7 @@
 				E77F88B42A5C6B9C000A33A6 /* FirebaseAnalytics in Frameworks */,
 				E7322B792A698D5700DC74E8 /* GoogleSignIn in Frameworks */,
 				E7ABDB7D2A77B9910024A52C /* FacebookCore in Frameworks */,
+				E7A98B002AB05B390073F9ED /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +216,7 @@
 		E7322B702A696FAA00DC74E8 /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				E7A98AF62AB059100073F9ED /* Animation */,
 				E7322B742A697A6800DC74E8 /* ViewModifiers */,
 				E77F88C32A606634000A33A6 /* Components */,
 			);
@@ -343,6 +352,24 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		E7A98AF62AB059100073F9ED /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				E7A98AF72AB0591A0073F9ED /* Resources */,
+				E7A98AF82AB0592F0073F9ED /* Configuration.swift */,
+				E7A98AFC2AB05A8B0073F9ED /* LottieView.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		E7A98AF72AB0591A0073F9ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E7A98AFA2AB059DD0073F9ED /* animation1.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E7BF1F2A2A6FBCC500C8BA43 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +439,7 @@
 				E7ABDB7E2A77B9910024A52C /* FacebookLogin */,
 				E7C1C1B42A8A970A007E7FE7 /* CocoaMQTT */,
 				E7C1C1B62A8A970A007E7FE7 /* CocoaMQTTWebSocket */,
+				E7A98AFF2AB05B390073F9ED /* Lottie */,
 			);
 			productName = SmartHomeApp;
 			productReference = E72108082A4A0DA600A17453 /* SmartHomeApp.app */;
@@ -446,6 +474,7 @@
 				E7322B772A698D5700DC74E8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				E7ABDB7B2A77B9910024A52C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				E7C1C1B32A8A970A007E7FE7 /* XCRemoteSwiftPackageReference "CocoaMQTT" */,
+				E7A98AFE2AB05B390073F9ED /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = E72108092A4A0DA600A17453 /* Products */;
 			projectDirPath = "";
@@ -461,6 +490,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A98AFB2AB059DD0073F9ED /* animation1.json in Resources */,
 				E72108132A4A0DA700A17453 /* Preview Assets.xcassets in Resources */,
 				E77F88B12A5C65FA000A33A6 /* GoogleService-Info.plist in Resources */,
 				E72108102A4A0DA700A17453 /* Assets.xcassets in Resources */,
@@ -483,6 +513,7 @@
 				E77F88BC2A5C8185000A33A6 /* AuthenticationManager.swift in Sources */,
 				E7BD75492A7CEA2A00C19343 /* LineComponent.swift in Sources */,
 				E77F889E2A575E26000A33A6 /* RegisterView.swift in Sources */,
+				E7A98AF92AB0592F0073F9ED /* Configuration.swift in Sources */,
 				E77F88AC2A5C5820000A33A6 /* LoginViewModel.swift in Sources */,
 				E7ABDB862A77D3620024A52C /* SignInFacebookHelper.swift in Sources */,
 				E7BD75472A7CE66100C19343 /* DeviceTile.swift in Sources */,
@@ -504,6 +535,7 @@
 				E7BD754F2A818D6A00C19343 /* WeatherAPIModel.swift in Sources */,
 				E72108212A4A22E600A17453 /* CustomSecureField.swift in Sources */,
 				E77F88C02A5E8A88000A33A6 /* PasswordRecoveryView.swift in Sources */,
+				E7A98AFD2AB05A8B0073F9ED /* LottieView.swift in Sources */,
 				E7BF1F2E2A6FC5E900C8BA43 /* SignInGoogleHelper.swift in Sources */,
 				E7C1C1B92A8A97E3007E7FE7 /* MqttManager.swift in Sources */,
 				E721080C2A4A0DA600A17453 /* SmartHomeAppApp.swift in Sources */,
@@ -738,6 +770,14 @@
 				version = 10.11.0;
 			};
 		};
+		E7A98AFE2AB05B390073F9ED /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		E7ABDB7B2A77B9910024A52C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
@@ -791,6 +831,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E77F88B22A5C6B9C000A33A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		E7A98AFF2AB05B390073F9ED /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7A98AFE2AB05B390073F9ED /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		E7ABDB7C2A77B9910024A52C /* FacebookCore */ = {
 			isa = XCSwiftPackageProductDependency;
