@@ -12,7 +12,7 @@ struct CustomRowComponent: View {
     enum Variant {
         case plainText(text: String, action: () -> Void)
         case toggle(text: String, binding: Binding<Bool>)
-        case language(text: String, options: [String], selectedOption: Binding<String?>)
+        case language(text: String, options: [String], selectedOption: Binding<String>)
     }
     
     private let symbol: String
@@ -54,13 +54,13 @@ struct CustomRowComponent: View {
                 buildText(text)
                 Menu {
                     Picker("", selection: selectedOption) {
-                        ForEach(options, id: \.self) { option in
-                            Text(option)
-                                .tag(option)
+                        ForEach(options.indices) { index in
+                            Text(options[index])
+                                .tag(options[index])
                         }
                     }
                 } label: {
-                    Text(selectedOption.wrappedValue ?? "")
+                    Text(selectedOption.wrappedValue)
                         .foregroundColor(Color.mainColorOrange)
                 }
             }
@@ -87,7 +87,7 @@ struct CustomRowComponent_Previews: PreviewProvider {
             
             CustomRowComponent(symbol: "moon.stars", variant: .toggle(text: "test", binding: .constant(true)))
             
-            CustomRowComponent(symbol: "moon.stars", variant: .language(text: "test", options: options, selectedOption: .constant(options.first)))
+            CustomRowComponent(symbol: "moon.stars", variant: .language(text: "test", options: options, selectedOption: .constant(options.first ?? "")))
         }
         
     }

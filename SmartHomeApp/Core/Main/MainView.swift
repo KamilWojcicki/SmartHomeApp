@@ -11,6 +11,8 @@ import SwiftUI
 final class MainViewModel: ObservableObject {
     
     @Published var authProviders: [AuthProviderOption] = []
+    @Published var toggleIsOn: Bool = false
+    @Published var selectedOption: String = "English"
     
     func loadAuthProviders() {
         if let provider = try? AuthenticationManager.shared.getProviders() {
@@ -83,9 +85,10 @@ struct MainView: View {
                     } label: {
                         Circle()
                             .fill(Color.red)
-                            .frame(width: 40, height: 40)
+                            .frame(width: 30, height: 30)
                             .overlay {
                                 Image(systemName: "power")
+                                    .imageScale(.medium)
                                     .tint(Color.white)
                             }
                     }
@@ -93,18 +96,18 @@ struct MainView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {
-                        SettingsView()
+                        SettingsView(toogle: $vm.toggleIsOn, selectedOption: $vm.selectedOption)
                     } label: {
                         Image(systemName: "gear")
                             .tint(Color.mainColorGray)
-                            .font(.system(size: 30))
+                            .font(.system(size: 23))
                     }
                 }
             })
             .onAppear {
                 vm.loadAuthProviders()
             }
-        } 
+        }
     }
 }
 
