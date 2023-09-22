@@ -11,7 +11,7 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             
-            VStack {
+            VStack(spacing: 30) {
                 
                 welcomeTextSection
                 

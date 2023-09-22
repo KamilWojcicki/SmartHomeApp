@@ -2,7 +2,6 @@ import Foundation
 import CocoaMQTT
 
 
-
 class MQTTManager: ObservableObject, CocoaMQTTDelegate {
     
     static let shared = MQTTManager()
