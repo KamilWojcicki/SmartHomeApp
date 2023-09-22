@@ -1,0 +1,26 @@
+{
+  "object" : {
+    "artifacts" : [
+      {
+        "kind" : "artifactsArchive",
+        "packageRef" : {
+          "identity" : "design",
+          "kind" : "root",
+          "location" : "/Users/kamilwojcicki/Desktop/projekt inżynierski/SmartHomeApp/SmartHomeApp/Dependencies/Design",
+          "name" : "Design"
+        },
+        "path" : "/Users/kamilwojcicki/Desktop/projekt inżynierski/SmartHomeApp/SmartHomeApp/Dependencies/Design/.build/artifacts/design/swiftgen/swiftgen.artifactbundle",
+        "source" : {
+          "checksum" : "7586363e24edcf18c2da3ef90f379e9559c1453f48ef5e8fbc0b818fbbc3a045",
+          "type" : "remote",
+          "url" : "https://github.com/SwiftGen/SwiftGen/releases/download/6.6.2/swiftgen-6.6.2.artifactbundle.zip"
+        },
+        "targetName" : "swiftgen"
+      }
+    ],
+    "dependencies" : [
+
+    ]
+  },
+  "version" : 6
+}

@@ -1,0 +1,49 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/kamilwojcicki/Desktop/projekt inżynierski/SmartHomeApp/SmartHomeApp/Dependencies/Design/.build/plugins/Swiftgen/cache/Swiftgen"
+relocations:
+  - { offsetInCU: 0x27, offset: 0x842FF, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV12CommandErrorOs0F0AAsAFP7_domainSSvgTW', symObjAddr: 0x0, symBinAddr: 0x100001D3C, symSize: 0x14 }
+  - { offsetInCU: 0x52, offset: 0x8432A, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV14performCommand7context9argumentsy07PackageD00D7ContextV_SaySSGtYaKF', symObjAddr: 0x50, symBinAddr: 0x100001D8C, symSize: 0x1DC }
+  - { offsetInCU: 0xE8, offset: 0x843C0, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV14performCommand7context9argumentsy07PackageD00D7ContextV_SaySSGtYaKFTY0_', symObjAddr: 0x22C, symBinAddr: 0x100001F68, symSize: 0xC10 }
+  - { offsetInCU: 0x187, offset: 0x8445F, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV5$mainyyYaKFZ', symObjAddr: 0x1010, symBinAddr: 0x100002D4C, symSize: 0xB0 }
+  - { offsetInCU: 0x1C8, offset: 0x844A0, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV5$mainyyYaKFZTQ0_', symObjAddr: 0x10C0, symBinAddr: 0x100002DFC, symSize: 0xF4 }
+  - { offsetInCU: 0x247, offset: 0x8451F, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV5$mainyyYaKFZTY1_', symObjAddr: 0x11B4, symBinAddr: 0x100002EF0, symSize: 0x54 }
+  - { offsetInCU: 0x289, offset: 0x84561, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV5$mainyyYaKFZTY2_', symObjAddr: 0x1208, symBinAddr: 0x100002F44, symSize: 0x5C }
+  - { offsetInCU: 0x2CB, offset: 0x845A3, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginVACycfC', symObjAddr: 0x1340, symBinAddr: 0x10000307C, symSize: 0x4 }
+  - { offsetInCU: 0x2F6, offset: 0x845CE, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV07PackageD007CommandD0AadEP07performF07context9argumentsyAD0D7ContextV_SaySSGtYaKFTW', symObjAddr: 0x1344, symBinAddr: 0x100003080, symSize: 0x7C }
+  - { offsetInCU: 0x32D, offset: 0x84605, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV07PackageD007CommandD0AadEP07performF07context9argumentsyAD0D7ContextV_SaySSGtYaKFTWTQ0_', symObjAddr: 0x13C0, symBinAddr: 0x1000030FC, symSize: 0x90 }
+  - { offsetInCU: 0x3A0, offset: 0x84678, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV07PackageD00D0AadEPxycfCTW', symObjAddr: 0x1464, symBinAddr: 0x1000031A0, symSize: 0x14 }
+  - { offsetInCU: 0x3BC, offset: 0x84694, size: 0x8, addend: 0x0, symName: _async_Main, symObjAddr: 0x1478, symBinAddr: 0x1000031B4, symSize: 0x6C }
+  - { offsetInCU: 0x3EE, offset: 0x846C6, size: 0x8, addend: 0x0, symName: _async_MainTQ0_, symObjAddr: 0x14E4, symBinAddr: 0x100003220, symSize: 0x6C }
+  - { offsetInCU: 0x435, offset: 0x8470D, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1550, symBinAddr: 0x10000328C, symSize: 0x88 }
+  - { offsetInCU: 0x462, offset: 0x8473A, size: 0x8, addend: 0x0, symName: ___swift_async_resume_get_context, symObjAddr: 0xE3C, symBinAddr: 0x100002B78, symSize: 0x4 }
+  - { offsetInCU: 0x476, offset: 0x8474E, size: 0x8, addend: 0x0, symName: '_$sSo6NSTaskCMa', symObjAddr: 0xE40, symBinAddr: 0x100002B7C, symSize: 0x64 }
+  - { offsetInCU: 0x48A, offset: 0x84762, size: 0x8, addend: 0x0, symName: '_$ss26DefaultStringInterpolationVWOh', symObjAddr: 0xF10, symBinAddr: 0x100002C4C, symSize: 0x28 }
+  - { offsetInCU: 0x49E, offset: 0x84776, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledName, symObjAddr: 0xF38, symBinAddr: 0x100002C74, symSize: 0x6C }
+  - { offsetInCU: 0x4B2, offset: 0x8478A, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV12CommandErrorOAEs0F0AAWl', symObjAddr: 0xFA4, symBinAddr: 0x100002CE0, symSize: 0x6C }
+  - { offsetInCU: 0x4E9, offset: 0x847C1, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginVAC07PackageD00D0AAWl', symObjAddr: 0x1264, symBinAddr: 0x100002FA0, symSize: 0x6C }
+  - { offsetInCU: 0x4FD, offset: 0x847D5, size: 0x8, addend: 0x0, symName: '_$sS2cMScAsWl', symObjAddr: 0x12D0, symBinAddr: 0x10000300C, symSize: 0x70 }
+  - { offsetInCU: 0x534, offset: 0x8480C, size: 0x8, addend: 0x0, symName: '_$sIetH_yts5Error_pIegHrzo_TR', symObjAddr: 0x15D8, symBinAddr: 0x100003314, symSize: 0x78 }
+  - { offsetInCU: 0x56E, offset: 0x84846, size: 0x8, addend: 0x0, symName: '_$sIetH_yts5Error_pIegHrzo_TRTQ0_', symObjAddr: 0x1650, symBinAddr: 0x10000338C, symSize: 0x64 }
+  - { offsetInCU: 0x5D0, offset: 0x848A8, size: 0x8, addend: 0x0, symName: '_$sIetH_yts5Error_pIegHrzo_TRTA', symObjAddr: 0x16DC, symBinAddr: 0x100003418, symSize: 0x9C }
+  - { offsetInCU: 0x600, offset: 0x848D8, size: 0x8, addend: 0x0, symName: '_$sIetH_yts5Error_pIegHrzo_TRTATQ0_', symObjAddr: 0x1778, symBinAddr: 0x1000034B4, symSize: 0x60 }
+  - { offsetInCU: 0x651, offset: 0x84929, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV07PackageD007CommandD0AaD0D0PWb', symObjAddr: 0x17D8, symBinAddr: 0x100003514, symSize: 0x14 }
+  - { offsetInCU: 0x665, offset: 0x8493D, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginVMa', symObjAddr: 0x17EC, symBinAddr: 0x100003528, symSize: 0x14 }
+  - { offsetInCU: 0x679, offset: 0x84951, size: 0x8, addend: 0x0, symName: ___swift_memcpy5_4, symObjAddr: 0x1800, symBinAddr: 0x10000353C, symSize: 0x14 }
+  - { offsetInCU: 0x68D, offset: 0x84965, size: 0x8, addend: 0x0, symName: ___swift_noop_void_return, symObjAddr: 0x1814, symBinAddr: 0x100003550, symSize: 0x4 }
+  - { offsetInCU: 0x6A1, offset: 0x84979, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV12CommandErrorOwet', symObjAddr: 0x1818, symBinAddr: 0x100003554, symSize: 0x134 }
+  - { offsetInCU: 0x6B5, offset: 0x8498D, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV12CommandErrorOwst', symObjAddr: 0x194C, symBinAddr: 0x100003688, symSize: 0x1EC }
+  - { offsetInCU: 0x6C9, offset: 0x849A1, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV12CommandErrorOwug', symObjAddr: 0x1B38, symBinAddr: 0x100003874, symSize: 0x40 }
+  - { offsetInCU: 0x6DD, offset: 0x849B5, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV12CommandErrorOwup', symObjAddr: 0x1B78, symBinAddr: 0x1000038B4, symSize: 0x4 }
+  - { offsetInCU: 0x6F1, offset: 0x849C9, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV12CommandErrorOwui', symObjAddr: 0x1B7C, symBinAddr: 0x1000038B8, symSize: 0x48 }
+  - { offsetInCU: 0x705, offset: 0x849DD, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV12CommandErrorOMa', symObjAddr: 0x1BC4, symBinAddr: 0x100003900, symSize: 0x14 }
+  - { offsetInCU: 0x719, offset: 0x849F1, size: 0x8, addend: 0x0, symName: '_$sSa12_endMutationyyF', symObjAddr: 0x1BF8, symBinAddr: 0x100003934, symSize: 0xC }
+  - { offsetInCU: 0x742, offset: 0x84A1A, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV12CommandErrorOs0F0AAsAFP7_domainSSvgTW', symObjAddr: 0x0, symBinAddr: 0x100001D3C, symSize: 0x14 }
+  - { offsetInCU: 0x75E, offset: 0x84A36, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV12CommandErrorOs0F0AAsAFP5_codeSivgTW', symObjAddr: 0x14, symBinAddr: 0x100001D50, symSize: 0x14 }
+  - { offsetInCU: 0x77A, offset: 0x84A52, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV12CommandErrorOs0F0AAsAFP9_userInfoyXlSgvgTW', symObjAddr: 0x28, symBinAddr: 0x100001D64, symSize: 0x14 }
+  - { offsetInCU: 0x796, offset: 0x84A6E, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV12CommandErrorOs0F0AAsAFP19_getEmbeddedNSErroryXlSgyFTW', symObjAddr: 0x3C, symBinAddr: 0x100001D78, symSize: 0x14 }
+  - { offsetInCU: 0x7B2, offset: 0x84A8A, size: 0x8, addend: 0x0, symName: '_$ss27_finalizeUninitializedArrayySayxGABnlF', symObjAddr: 0xED0, symBinAddr: 0x100002C0C, symSize: 0x40 }
+  - { offsetInCU: 0x836, offset: 0x84B0E, size: 0x8, addend: 0x0, symName: '_$s8Swiftgen14SwiftGenPluginV07PackageD007CommandD0AadEP14packageManagerAD0eH0VvgTW', symObjAddr: 0x1450, symBinAddr: 0x10000318C, symSize: 0x14 }
+  - { offsetInCU: 0x885, offset: 0x84B5D, size: 0x8, addend: 0x0, symName: '_$sSo6NSTaskCABycfC', symObjAddr: 0xEA4, symBinAddr: 0x100002BE0, symSize: 0x2C }
+  - { offsetInCU: 0x8A1, offset: 0x84B79, size: 0x8, addend: 0x0, symName: '_$sSo6NSTaskCABycfcTO', symObjAddr: 0x1BD8, symBinAddr: 0x100003914, symSize: 0x20 }
+...
