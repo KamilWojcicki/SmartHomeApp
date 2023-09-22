@@ -15,13 +15,31 @@ enum AuthProviderOption: String {
     case facebook = "facebook.com"
 }
 
-final class AuthenticationManager {
+protocol AuthenticationManagerProtocol {
+    func getAuthenticatedUser() throws -> AuthDataResultModel
+    func getProviders() throws -> [AuthProviderOption]
+    func signOut() throws
+    @discardableResult
+    func createUser(email: String, password: String) async throws -> AuthDataResultModel
+    @discardableResult
+    func signInUser(email: String, password: String) async throws -> AuthDataResultModel
+    func resetPassword(email: String) async throws
+    func updatePassword(password: String) async throws
+    func isUserRegistered(email: String) async throws -> Bool
+    func signIn(credential: AuthCredential) async throws -> AuthDataResultModel
+    @discardableResult
+    func signInWithGoogle(tokens: GoogleSignInResultModel) async throws -> AuthDataResultModel
+    @discardableResult
+    func signInWithFacebook(tokens: FacebookSignInResultModel) async throws -> AuthDataResultModel
+}
+
+final class AuthenticationManager: AuthenticationManagerProtocol {
     
     
     
     //singleton, docelowo spróbować zrobić dependency injection
-    static let shared = AuthenticationManager()
-    private init() { }
+//    static let shared = AuthenticationManager()
+//    private init() { }
     
     func getAuthenticatedUser() throws -> AuthDataResultModel {
         guard let user = Auth.auth().currentUser else {
@@ -84,17 +102,16 @@ extension AuthenticationManager {
     
     func isUserRegistered(email: String) async throws -> Bool {
         do {
-                let user = try await Auth.auth().fetchSignInMethods(forEmail: email)
-                
-                return !user.isEmpty
-            } catch {
-                throw error
-            }
+            let user = try await Auth.auth().fetchSignInMethods(forEmail: email)
+            
+            return !user.isEmpty
+        } catch {
+            throw error
+        }
     }
-    
 }
 
-// MARK: SIGN IN WITH SSO
+// MARK: SIGN IN WITH GOOGLE
 
 extension AuthenticationManager {
     

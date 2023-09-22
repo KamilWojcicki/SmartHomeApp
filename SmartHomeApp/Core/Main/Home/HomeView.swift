@@ -6,16 +6,20 @@
 //
 
 import SwiftUI
+import Animation
+import Design
+import Components
 
 struct HomeView: View {
     var body: some View {
         ZStack {
-            
-            VStack(spacing: 30) {
+            VStack(spacing: 20) {
                 
                 welcomeTextSection
                 
-                DeviceTile()
+                //DeviceTile()
+                
+                LottieView(animationConfiguration: .loader)
                 
                 Spacer()
             }
@@ -42,7 +46,6 @@ extension HomeView {
                 
             Text("Remember about your today's tasks")
                 .font(.system(size: 20))
-                .foregroundColor(Color.mainColorGray)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .lineSpacing(7)

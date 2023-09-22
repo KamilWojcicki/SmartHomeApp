@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import Components
+import DependencyInjection
 
 @MainActor
 final class AuthenticationViewModel: ObservableObject {
+    @Inject var authenticationManager: AuthenticationManagerProtocol
     @Published var buttonSwitch: Bool = true
     @Published var transition: Bool = false
     @Published var showAlert: Bool = false
@@ -17,13 +20,13 @@ final class AuthenticationViewModel: ObservableObject {
     func signInGoogle() async throws {
         let helper = SignInGoogleHelper()
         let tokens = try await helper.signIn()
-        try await AuthenticationManager.shared.signInWithGoogle(tokens: tokens)
+        try await authenticationManager.signInWithGoogle(tokens: tokens)
     }
     
     func signInFacebook() async throws{
         let helper = SignInFacebookHelper()
         let tokens = try await helper.signIn()
-        try await AuthenticationManager.shared.signInWithFacebook(tokens: tokens)
+        try await authenticationManager.signInWithFacebook(tokens: tokens)
     }
 }
 
@@ -40,7 +43,7 @@ struct AuthenticationView: View {
                 RegisterView()
             }
             
-            ButtonSwitchView()
+            ButtonSwitch(switchButton: $vm.buttonSwitch)
                 .padding(30)
             
         }
@@ -49,11 +52,18 @@ struct AuthenticationView: View {
                 print("Received error: \(error?.localizedDescription ?? "dupa")")
                 vm.showAlert.toggle()
             }
+            
+//            guard let error = error else {
+//                print("dupa")
+//                return
+//            }
+//            print("Received error: \(error.localizedDescription)")
+//            vm.showAlert.toggle()
         }
         .alert(Text("Error"), isPresented: $vm.showAlert, actions: {
             
         }, message: {
-            Text(vm.error?.localizedDescription ?? "")
+            Text(vm.error?.localizedDescription ?? "seks")
         })
         .environmentObject(vm)
     }

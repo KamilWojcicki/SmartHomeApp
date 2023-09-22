@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Components
+import Design
 
 struct LoginView: View {
     
@@ -64,10 +66,10 @@ extension LoginView {
     
     private var logintextFields: some View {
         VStack(spacing: 20) {
-            CustomTextField(textFieldLogin: $vm.email, placecholder: "Enter E-mail")
+            TextField(textFieldLogin: $vm.email, placecholder: "Enter E-mail")
                 .textInputAutocapitalization(.none)
             
-            CustomSecureField(textFieldPassword: $vm.password, placecholder: "Password")
+            SecureField(textFieldPassword: $vm.password, placecholder: "Password")
                 .textInputAutocapitalization(.none)
         }
         .padding(.top, 20)
@@ -117,22 +119,22 @@ extension LoginView {
     
     private var textWithLines: some View {
         HStack {
-            CustomLineComponent(startPoint: .leading, endPoint: .trailing)
+            CustomLine(startPoint: .leading, endPoint: .trailing)
 
             Text("Or continue with")
                 .font(.footnote)
                 .padding(.horizontal)
             
-            CustomLineComponent(startPoint: .trailing, endPoint: .leading)
+            CustomLine(startPoint: .trailing, endPoint: .leading)
         }
         
     }
     
     private var socialMediaStack: some View {
         HStack {
-            SocialMediaLoginView(type: .google)
-            SocialMediaLoginView(type: .apple)
-            SocialMediaLoginView(type: .facebook)
+            SocialMediaLoginView(showSignInView: $rootVM.showSignInView, type: .google)
+            SocialMediaLoginView(showSignInView: $rootVM.showSignInView,type: .apple)
+            SocialMediaLoginView(showSignInView: $rootVM.showSignInView,type: .facebook)
         }
     }
 }

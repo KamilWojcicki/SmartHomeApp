@@ -10,8 +10,8 @@ import Foundation
 enum AppError: Error, LocalizedError {
     case emptyFields
     case emptyEmail
+    case wrong
     case wrongEmail
-    case wrongPassword
     case wrongFullname
     case passwordNotMatch
     case shortPassword
@@ -26,8 +26,8 @@ enum AppError: Error, LocalizedError {
             return "Email field is empty! Please enter an e-mail."
         case .wrongEmail:
             return "There is a problem with e-mail! Check if you enter a valid e-mail."
-        case .wrongPassword:
-            return "There is a problem with password! Check if you enter a valid password."
+        case .wrong:
+            return "Wrong e-mail or password! Try again."
         case .wrongFullname:
             return "There is a problem with fullname! Fullname must contains your name and surname separated by a space."
         case .passwordNotMatch:

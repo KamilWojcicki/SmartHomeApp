@@ -6,39 +6,42 @@
 //
 
 import SwiftUI
+import Navigation
+import Design
+import DependencyInjection
 
 @MainActor
 final class MainViewModel: ObservableObject {
-    
+    @Inject var authenticationManager: AuthenticationManagerProtocol
     @Published var authProviders: [AuthProviderOption] = []
     @Published var toggleIsOn: Bool = false
     @Published var selectedOption: String = "English"
     
     func loadAuthProviders() {
-        if let provider = try? AuthenticationManager.shared.getProviders() {
+        if let provider = try? authenticationManager.getProviders() {
             authProviders = provider
         }
             
     }
     
     func signOut() throws {
-        try AuthenticationManager.shared.signOut()
+        try authenticationManager.signOut()
     }
     
     func resetPassword() async throws {
         
-        let authUser = try AuthenticationManager.shared.getAuthenticatedUser()
+        let authUser = try authenticationManager.getAuthenticatedUser()
         
         guard let email = authUser.email else {
             throw URLError(.fileDoesNotExist)
         }
         
-        try await AuthenticationManager.shared.resetPassword(email: email)
+        try await authenticationManager.resetPassword(email: email)
     }
     
     func updatePassword() async throws {
         let password = "test123!"
-        try await AuthenticationManager.shared.updatePassword(password: password)
+        try await authenticationManager.updatePassword(password: password)
     }
     
 }
@@ -52,9 +55,8 @@ struct MainView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                
                 Spacer()
-                CustomTabBarContainerView(selection: $tabSelection) {
+                TabBarContainerView(selection: $tabSelection) {
                     ZStack {
                         TasksView()
                             .tabBarItem(tab: .tasks, selection: $tabSelection)
@@ -62,7 +64,6 @@ struct MainView: View {
                             .tabBarItem(tab: .home, selection: $tabSelection)
                         DevicesView()
                             .tabBarItem(tab: .devices, selection: $tabSelection)
-                    
                     }
                 }
                 
@@ -89,7 +90,7 @@ struct MainView: View {
                             .overlay {
                                 Image(systemName: "power")
                                     .imageScale(.medium)
-                                    .tint(Color.white)
+                                    .tint(Colors.white)
                             }
                     }
                 }
@@ -99,7 +100,7 @@ struct MainView: View {
                         SettingsView(toogle: $vm.toggleIsOn, selectedOption: $vm.selectedOption)
                     } label: {
                         Image(systemName: "gear")
-                            .tint(Color.mainColorGray)
+                            .tint(Colors.oxfordBlue)
                             .font(.system(size: 23))
                     }
                 }

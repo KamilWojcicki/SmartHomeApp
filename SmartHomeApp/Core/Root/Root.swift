@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-
+import DependencyInjection
 
 struct Root: View {
-    
+    @Inject var authenticationManager: AuthenticationManagerProtocol
     @StateObject private var vm = RootViewModel()
     
     var body: some View {
@@ -19,7 +19,7 @@ struct Root: View {
             }
         }
         .onAppear {
-            let authUser = try? AuthenticationManager.shared.getAuthenticatedUser()
+            let authUser = try? authenticationManager.getAuthenticatedUser()
             self.vm.showSignInView = authUser == nil
         }
         .fullScreenCover(isPresented: $vm.showSignInView) {

@@ -6,24 +6,22 @@
 //
 
 import SwiftUI
+import Components
 
 struct RegisterView: View {
     
     @StateObject private var vm = RegisterViewModel()
     @EnvironmentObject var rootVM: RootViewModel
+    @EnvironmentObject var authVM: AuthenticationViewModel
     
     var body: some View {
         ZStack {
-            
-            //Background()
             
             VStack(spacing: 20) {
                 
                 header
                 
                 registerTextFields
-                
-                //CustomButton(buttonTitle: "Register now", action:)
                 
                 Button {
                     Task {
@@ -32,7 +30,7 @@ struct RegisterView: View {
                             rootVM.showSignInView = true
                             print("User added successfully!")
                         } catch {
-                            print(error)
+                            self.authVM.error = error
                         }
                     }
                 } label: {
@@ -72,13 +70,13 @@ extension RegisterView {
     
     private var registerTextFields: some View {
         VStack(spacing: 20) {
-            CustomTextField(textFieldLogin: $vm.email, placecholder: "Enter new E-mail")
+            TextField(textFieldLogin: $vm.email, placecholder: "Enter new E-mail")
             
-            CustomTextField(textFieldLogin: $vm.fullname, placecholder: "Enter your full name")
+            TextField(textFieldLogin: $vm.fullname, placecholder: "Enter your full name")
             
-            CustomSecureField(textFieldPassword: $vm.password, placecholder: "Enter Password")
+            SecureField(textFieldPassword: $vm.password, placecholder: "Enter Password")
             
-            CustomSecureField(textFieldPassword: $vm.confirmPassword, placecholder: "Confirm Password")
+            SecureField(textFieldPassword: $vm.confirmPassword, placecholder: "Confirm Password")
         }
         .padding(.top, 20)
     }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Components
 
 struct PasswordRecoveryView: View {
     
@@ -21,7 +22,7 @@ struct PasswordRecoveryView: View {
                 .font(.title)
                 .bold()
             
-            CustomTextField(textFieldLogin: $email, placecholder: "Enter your email:")
+            TextField(textFieldLogin: $email, placecholder: "Enter your email:")
             
             recoveryButton
             

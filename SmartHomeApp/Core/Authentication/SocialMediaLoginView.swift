@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import Design
 
 struct SocialMediaLoginView: View {
     
     @StateObject private var authVM = AuthenticationViewModel()
-    @EnvironmentObject var rootVM: RootViewModel
+    //@EnvironmentObject var rootVM: RootViewModel
+    @Binding private var showSignInView: Bool
     enum buttonType {
         case apple, google, facebook
     }
@@ -24,7 +26,8 @@ struct SocialMediaLoginView: View {
         }
     }
     
-    init(type: buttonType) {
+    init(showSignInView: Binding<Bool>, type: buttonType) {
+        self._showSignInView = showSignInView
         self.type = type
     }
     
@@ -33,7 +36,7 @@ struct SocialMediaLoginView: View {
             Task {
                 do {
                     try await button.action()
-                    rootVM.showSignInView = false
+                    showSignInView = false
                 } catch {
                     print(error)
                 }
@@ -47,7 +50,7 @@ struct SocialMediaLoginView: View {
                 .padding(.horizontal, 18)
                 .background(
                     RoundedRectangle(cornerRadius: 15)
-                        .stroke(Color.mainColorGray, lineWidth: 2)
+                        .stroke(Colors.oxfordBlue, lineWidth: 2)
                         .foregroundColor(.black)
                         .frame(maxWidth: UIScreen.main.bounds.width * 0.22)
                         .frame(height: 55)
@@ -58,6 +61,6 @@ struct SocialMediaLoginView: View {
 
 struct SocialMediaLoginView_Previews: PreviewProvider {
     static var previews: some View {
-        SocialMediaLoginView(type: .apple)
+        SocialMediaLoginView(showSignInView: .constant(true), type: .apple)
     }
 }

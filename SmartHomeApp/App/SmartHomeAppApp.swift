@@ -7,13 +7,15 @@
 
 import SwiftUI
 import Firebase
+import DependencyInjection
 
 @main
 struct SmartHomeAppApp: App {
-    
+        
     init() {
         FirebaseApp.configure()
         print("Configured FIREBASE!")
+        @Provider var AuthenticationManager = AuthenticationManager() as AuthenticationManagerProtocol
     }
     
     @UIApplicationDelegateAdaptor(AppDelegateFB.self) var appDelegate
@@ -21,7 +23,6 @@ struct SmartHomeAppApp: App {
     var body: some Scene {
         WindowGroup {
             Root()
-            //SettingsView()
         }
     }
 }
