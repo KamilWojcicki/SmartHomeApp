@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,6 +41,7 @@
 		E77F88CA2A6122CE000A33A6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E77F88C92A6122CE000A33A6 /* FirebaseFirestore */; };
 		E77F88CC2A6122D3000A33A6 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E77F88CB2A6122D3000A33A6 /* FirebaseFirestoreSwift */; };
 		E77F88CE2A67EE59000A33A6 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77F88CD2A67EE59000A33A6 /* AppError.swift */; };
+		E7A80BC42AC4183A00193952 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = E7A80BC32AC4183A00193952 /* Dependencies */; };
 		E7A98AF92AB0592F0073F9ED /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A98AF82AB0592F0073F9ED /* Configuration.swift */; };
 		E7A98AFB2AB059DD0073F9ED /* animation1.json in Resources */ = {isa = PBXBuildFile; fileRef = E7A98AFA2AB059DD0073F9ED /* animation1.json */; };
 		E7A98AFD2AB05A8B0073F9ED /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A98AFC2AB05A8B0073F9ED /* LottieView.swift */; };
@@ -138,6 +139,7 @@
 				E7ABDB7F2A77B9910024A52C /* FacebookLogin in Frameworks */,
 				E77F88B42A5C6B9C000A33A6 /* FirebaseAnalytics in Frameworks */,
 				E7322B792A698D5700DC74E8 /* GoogleSignIn in Frameworks */,
+				E7A80BC42AC4183A00193952 /* Dependencies in Frameworks */,
 				E7ABDB7D2A77B9910024A52C /* FacebookCore in Frameworks */,
 				E7A98B002AB05B390073F9ED /* Lottie in Frameworks */,
 			);
@@ -440,6 +442,7 @@
 				E7C1C1B42A8A970A007E7FE7 /* CocoaMQTT */,
 				E7C1C1B62A8A970A007E7FE7 /* CocoaMQTTWebSocket */,
 				E7A98AFF2AB05B390073F9ED /* Lottie */,
+				E7A80BC32AC4183A00193952 /* Dependencies */,
 			);
 			productName = SmartHomeApp;
 			productReference = E72108082A4A0DA600A17453 /* SmartHomeApp.app */;
@@ -475,6 +478,7 @@
 				E7ABDB7B2A77B9910024A52C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				E7C1C1B32A8A970A007E7FE7 /* XCRemoteSwiftPackageReference "CocoaMQTT" */,
 				E7A98AFE2AB05B390073F9ED /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				E7A80BC22AC4183A00193952 /* XCLocalSwiftPackageReference "SmartHomeApp/Dependencies" */,
 			);
 			productRefGroup = E72108092A4A0DA600A17453 /* Products */;
 			projectDirPath = "";
@@ -753,6 +757,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		E7A80BC22AC4183A00193952 /* XCLocalSwiftPackageReference "SmartHomeApp/Dependencies" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SmartHomeApp/Dependencies;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		E7322B772A698D5700DC74E8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -831,6 +842,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E77F88B22A5C6B9C000A33A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		E7A80BC32AC4183A00193952 /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Dependencies;
 		};
 		E7A98AFF2AB05B390073F9ED /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
