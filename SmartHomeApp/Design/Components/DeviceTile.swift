@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Design
 
 struct DeviceTile: View {
     
@@ -49,7 +50,7 @@ struct DeviceTile: View {
                 }
                 .padding(.horizontal)
             }
-            .withTextStyleViewModifier()
+            //.withTextStyleViewModifier()
         }
     }
 }

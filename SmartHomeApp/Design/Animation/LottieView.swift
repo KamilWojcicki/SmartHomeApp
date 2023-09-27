@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
-//import Lottie
+import Design
+import Components
+import Lottie
 
 public struct LottieView: UIViewRepresentable {
     private var animationView = LottieAnimationView()

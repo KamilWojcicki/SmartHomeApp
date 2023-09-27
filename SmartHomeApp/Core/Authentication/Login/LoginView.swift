@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Design
 struct LoginView: View {
     
     @StateObject private var vm = LoginViewModel()

@@ -44,6 +44,7 @@
 //}
 
 import SwiftUI
+import Components
 
 struct SettingsView: View {
     
@@ -60,17 +61,17 @@ struct SettingsView: View {
                     .resizable()
                     .scaledToFit()
                 
-                CustomRowComponent(symbol: "moon.stars.fill", variant: .toggle(text: "Dark mode", binding: $toogle))
+                Row(symbol: "moon.stars.fill", variant: .toggle(text: "Dark mode", binding: $toogle))
                 
-                CustomRowComponent(symbol: "character.bubble.fill", variant: .language(text: "Language", options: languageOptions, selectedOption: $selectedOption))
+                Row(symbol: "character.bubble.fill", variant: .language(text: "Language", options: languageOptions, selectedOption: $selectedOption))
                 
-                CustomRowComponent(symbol: "doc.text.fill", variant: .plainText(text: "Privacy Policy", action: { } ))
+                Row(symbol: "doc.text.fill", variant: .plainText(text: "Privacy Policy", action: { } ))
                 
-                CustomRowComponent(symbol: "list.star", variant: .plainText(text: "Terms & Conditions", action: { } ))
+                Row(symbol: "list.star", variant: .plainText(text: "Terms & Conditions", action: { } ))
                 
-                CustomRowComponent(symbol: "envelope.fill", variant: .plainText(text: "Contact Us", action: { } ))
+                Row(symbol: "envelope.fill", variant: .plainText(text: "Contact Us", action: { } ))
                 
-                CustomRowComponent(symbol: "person.2.fill", variant: .plainText(text: "Our Team", action: { } ))
+                Row(symbol: "person.2.fill", variant: .plainText(text: "Our Team", action: { } ))
                 Spacer()
             }
             .padding(.horizontal)

@@ -1,8 +1,8 @@
 //
-//  LottieView.swift
+//  File.swift
 //  
 //
-//  Created by Kamil Wójcicki on 12/09/2023.
+//  Created by Kamil Wójcicki on 18/09/2023.
 //
 
 import SwiftUI

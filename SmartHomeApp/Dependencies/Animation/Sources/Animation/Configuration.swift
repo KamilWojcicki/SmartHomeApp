@@ -1,8 +1,8 @@
 //
-//  Configuration.swift
+//  File.swift
 //  
 //
-//  Created by Kamil Wójcicki on 12/09/2023.
+//  Created by Kamil Wójcicki on 18/09/2023.
 //
 
 import Foundation
@@ -36,12 +36,13 @@ public struct Configuration {
 extension Configuration {
     public static let loader: Self = .init(
         lightMode: .init(
-            filename: "animation1.json",
+            filename: "animation2.json",
             bundle: .module
         ),
         darkMode: .init(
-            filename: "animation1.json",
+            filename: "animation2.json",
             bundle: .module
         )
     )
 }
+
