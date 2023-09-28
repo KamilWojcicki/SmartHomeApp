@@ -8,13 +8,13 @@
 import SwiftUI
 import Components
 
-struct PasswordRecoveryView: View {
+public struct PasswordRecoveryView: View {
     
-    @ObservedObject var loginVM: LoginViewModel
+    @ObservedObject public var loginVM: LoginViewModel
     @EnvironmentObject var authVM: AuthenticationViewModel
     @State private var email: String = ""
     
-    var body: some View {
+    public var body: some View {
         VStack(spacing: 40) {
             
             Text("Enter your e-mail to get a recovery password")

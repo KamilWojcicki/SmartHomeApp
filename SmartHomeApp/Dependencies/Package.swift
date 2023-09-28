@@ -16,7 +16,8 @@ let package = Package(
         .package(path: "Animation"),
         .package(path: "Components"),
         .package(path: "Navigation"),
-        .package(path: "DependencyInjection")
+        .package(path: "DependencyInjection"),
+        .package(path: "Authentication")
     ],
     targets: [
         .target(
@@ -25,7 +26,8 @@ let package = Package(
                 .product(name: "Animation", package: "Animation"),
                 .product(name: "Components", package: "Components"),
                 .product(name: "Navigation", package: "Navigation"),
-                .product(name: "DependencyInjection", package: "DependencyInjection")
+                .product(name: "DependencyInjection", package: "DependencyInjection"),
+                .product(name: "Authentication", package: "Authentication")
             ]),
     ]
 )

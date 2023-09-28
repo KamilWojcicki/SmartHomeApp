@@ -9,7 +9,7 @@ import SwiftUI
 import Components
 import Design
 
-struct LoginView: View {
+public struct LoginView: View {
     
     @StateObject private var vm = LoginViewModel()
     @EnvironmentObject var rootVM: RootViewModel
@@ -17,7 +17,7 @@ struct LoginView: View {
     @State private var detents: PresentationDetent = .medium
     @State private var showAlert: Bool = false
     
-    var body: some View {
+    public var body: some View {
             VStack(spacing: 20) {
                 
                 header
@@ -127,9 +127,10 @@ extension LoginView {
     
     private var socialMediaStack: some View {
         HStack {
-            SocialMediaLoginView(showSignInView: $rootVM.showSignInView, type: .google)
-            SocialMediaLoginView(showSignInView: $rootVM.showSignInView,type: .apple)
-            SocialMediaLoginView(showSignInView: $rootVM.showSignInView,type: .facebook)
+            
+            SocialMediaButton(showSignInView: $rootVM.showSignInView, type: .google, action: {})
+            SocialMediaButton(showSignInView: $rootVM.showSignInView,type: .apple, action: {})
+            SocialMediaButton(showSignInView: $rootVM.showSignInView,type: .facebook, action: {})
         }
     }
 }

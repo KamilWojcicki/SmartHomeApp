@@ -9,16 +9,16 @@ import Foundation
 import DependencyInjection
 
 @MainActor
-final class LoginViewModel: ObservableObject {
+public final class LoginViewModel: ObservableObject {
     @Inject var authenticationManager: AuthenticationManagerProtocol
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var showSheet: Bool = false
     
-    func signIn() async throws {
+    public func signIn() async throws {
         guard !email.isEmpty, !password.isEmpty else {
             print("NO EMAIL OR PASSWORD FOUND!")
-            throw AppError.emptyFields
+            throw AuthErrors.emptyFields
         }
         try await authenticationManager.signInUser(email: email, password: password)
     }
@@ -26,13 +26,13 @@ final class LoginViewModel: ObservableObject {
     func resetPassword(email: String) async throws {
         
         guard !email.isEmpty else {
-            throw AppError.emptyEmail
+            throw AuthErrors.emptyEmail
         }
         
         let isRegistered = try await authenticationManager.isUserRegistered(email: email)
         
         guard isRegistered else {
-            throw AppError.wrongEmail
+            throw AuthErrors.wrongEmail
         }
         
         try await authenticationManager.resetPassword(email: email)

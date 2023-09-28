@@ -11,20 +11,19 @@ import DependencyInjection
 
 
 
-struct AuthenticationView: View {
+public struct AuthenticationView: View {
     
     @StateObject private var vm = AuthenticationViewModel()
     
-    var body: some View {
+    public var body: some View {
         ZStack {
-            
             if vm.buttonSwitch {
                 LoginView()
             } else {
                 RegisterView()
             }
             
-            ButtonSwitchView(switchButton: $vm.buttonSwitch)
+            ButtonSwitch(switchButton: $vm.buttonSwitch)
                 .padding(30)
             
         }

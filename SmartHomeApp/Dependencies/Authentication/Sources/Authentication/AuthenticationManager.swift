@@ -9,13 +9,13 @@ import Foundation
 import FirebaseAuth
 import FBSDKLoginKit
 
-enum AuthProviderOption: String {
+internal enum AuthProviderOption: String {
     case email = "password"
     case google = "google.com"
     case facebook = "facebook.com"
 }
 
-protocol AuthenticationManagerProtocol {
+internal protocol AuthenticationManagerProtocol {
     func getAuthenticatedUser() throws -> AuthDataResultModel
     func getProviders() throws -> [AuthProviderOption]
     func signOut() throws
@@ -33,7 +33,7 @@ protocol AuthenticationManagerProtocol {
     func signInWithFacebook(tokens: FacebookSignInResultModel) async throws -> AuthDataResultModel
 }
 
-final class AuthenticationManager: AuthenticationManagerProtocol {
+internal final class AuthenticationManager: AuthenticationManagerProtocol {
     func getAuthenticatedUser() throws -> AuthDataResultModel {
         guard let user = Auth.auth().currentUser else {
             throw URLError(.badServerResponse) //custom error

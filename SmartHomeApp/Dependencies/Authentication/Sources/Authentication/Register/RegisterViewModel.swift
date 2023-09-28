@@ -20,17 +20,17 @@ class RegisterViewModel: ObservableObject {
         
         guard !email.isEmpty, !password.isEmpty, !confirmPassword.isEmpty, !fullname.isEmpty else {
             print("NO EMAIL OR PASSWORD FOUND!")
-            throw AppError.emptyFields
+            throw AuthErrors.emptyFields
         }
         
         guard password.count > 7 else {
             print("PASSWORD IS TO SHORT")
-            throw AppError.shortPassword
+            throw AuthErrors.shortPassword
         }
         
         guard password == confirmPassword else {
             print("PASSWORDS DO NOT MATCH!")
-            throw AppError.passwordNotMatch
+            throw AuthErrors.passwordNotMatch
         }
         
         do {
